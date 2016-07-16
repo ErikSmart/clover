@@ -1,0 +1,106 @@
+/*Imagen con titulos*/
+.contenedor-img {
+width: 612px;
+height: 264px;
+float: left;
+overflow: hidden;
+position: relative;
+text-align: center;
+cursor: default;
+background: #fff;
+}
+.contenedor-img .mascara,.contenedor-img .contenido {
+width: 612px;
+height: 264px;
+position: absolute;
+overflow: hidden;
+top: 0;
+left: 0
+}
+.contenedor-img img {
+display: block;
+position: relative;
+
+}
+.contenedor-img h2 {
+text-transform: uppercase;
+color: #000;
+text-align: center;
+position: relative;
+font-size: 17px;
+padding: 10px;
+background: #e8e8e8;
+margin: 20px 0 0 0;
+}
+.contenedor-img p {
+font-size: 12px;
+position: relative;
+color: #000;
+padding: 10px 20px 10px;
+text-align: center
+}
+.contenedor-img a.link {
+display: inline-block;
+text-decoration: none;
+padding: 7px 14px;
+background: #e8e8e8;
+color: #000;
+text-transform: uppercase;
+box-shadow: 0 0 1px #000
+}
+.contenedor-img a.link:hover {
+box-shadow: 0 0 5px #000
+}
+/*Ejemplo 1*/
+.trancision-imagen img {
+transition: all 0.2s linear;
+}
+.trancision-imagen .mascara {
+opacity: 0;
+background-color: rgba(46,157,120, 0.7);
+transition: all 0.3s ease-in-out;
+}
+.trancision-imagen h2 {
+transform: translateX(-200px);/*Desplazamos a la izquierda*/
+opacity: 0;
+transition: all 0.7s ease-in-out;
+}
+.trancision-imagen p {
+transform: translateX(200px);/*Desplazamos a la derecha*/
+opacity: 0;
+transition: all 0.4s linear;
+}
+.trancision-imagen a.link{
+opacity: 0;
+transition: all 0.4s ease-in-out;
+transform: translateY(100px)/*Desplazamos para abajo*/
+}
+.trancision-imagen:hover img {
+transform: scale(1.1);/*Damos un ligero zoom a la imagen*/
+}
+.trancision-imagen:hover .mascara {
+opacity: 1;
+}
+.trancision-imagen:hover h2,
+.trancision-imagen:hover p,
+.trancision-imagen:hover a.link {
+opacity: 1;
+transform: translateX(0px);/*Regresamos a las posiciones originales*/
+}
+.trancision-imagen:hover p {
+transition-delay: 0.1s;
+}
+.trancision-imagen:hover a.link {
+transition-delay: 0.2s; /*Aplicamos un pequeño retardo para que se muestre al final*/
+transform: translateY(0px);
+}
+/*Imagen con titulos*/
+
+/* MD Medium | Horizontal tabletas*/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+/* LG Large */
+@media (min-width: 1200px) {
+  .contenedor-img p {font-size: 16px;}
+}
